@@ -2,10 +2,10 @@ package blackjack;
 
 public class HumanPlayer extends Player {
 
-	private int balance;
+	private int balance = 100;
 	
-	public HumanPlayer(String playerName) {
-		super(playerName);
+	public HumanPlayer() {
+		super();
 	}
 	
 	

@@ -38,6 +38,8 @@ public class Card {
 	public void setValue() {
 		switch(getName()) {
 			case "Ace": 
+				this.value = 11;
+				break;
 			case "King":
 			case "Queen":
 			case "Jack":

@@ -6,6 +6,11 @@ public abstract class Player {
 	
 	private String name;
 	private ArrayList<Card> hand = new ArrayList<Card>();
+	private int handValue; 
+	
+	public Player() {
+		
+	}
 	
 	public Player(String name) {
 		this.name = name;
@@ -30,5 +35,18 @@ public abstract class Player {
 	public void setHand(Card card) {
 		this.hand.add(card);
 	}
+
+	public int getHandValue() {
+		return handValue;
+	}
+
+	public void setHandValue() {
+		int hv = 0;
+		for(Card card: hand) {
+			hv += card.getValue();
+		}
+		this.handValue = hv;
+	}
+	
 	
 }

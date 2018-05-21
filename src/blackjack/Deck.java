@@ -29,8 +29,9 @@ public class Deck {
 		Collections.shuffle(deck);
 	}
 	
-	// method to deal the card to the dealer and the player
+	// method to deal the starting cards to the dealer and the player
 	public void deal(Player player) {
+		
 		player.setHand(deck.poll());
 	}
 
