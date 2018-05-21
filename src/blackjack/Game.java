@@ -39,7 +39,9 @@ public class Game {
 
 		while (!bankrupt) {
 			
-			handOver = false;
+			// shuffle deck
+			myDeck.shuffle();
+			
 			// deal starting cards
 			for (int loop = 0; loop < 4; loop++) {
 				if (loop % 2 == 0) {
@@ -130,7 +132,20 @@ public class Game {
 				}
 			}
 			
+			// check if player bankrupt
 			bankrupt();
+			
+			// reset handOver
+			handOver = false;
+			
+			// put cards back into deck
+			myDeck.deck.addAll(dealer.getHand());
+			myDeck.deck.addAll(hp.getHand());
+			
+			
+			// clear hands from players
+			dealer.getHand().clear();
+			hp.getHand().clear();
 			
 		}
 
